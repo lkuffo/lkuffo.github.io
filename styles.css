@@ -1,0 +1,77 @@
+html {
+	font-family: 'Muli', sans-serif;
+	font-size: 16px;
+}
+
+table{
+	
+}
+
+body{
+	margin-left: 300px;
+	margin-right: 300px;
+	margin-top: 50px;
+}
+
+h1{
+	font-weight: bold;
+	font-size: 1.7em;
+}
+
+h2{
+	color: rgb(255, 128, 191);
+	text-transform: uppercase;
+	font-size: 0.9em;
+	font-weight: bold;
+	margin-top: 0px;
+	border-top: 0px;
+}
+
+.subtitle{
+	vertical-align: top;
+	margin-top: 0px;
+}
+
+.information{
+	margin-top: 0px;
+	border-top: 0px;
+}
+
+p{
+	font-size: 0.9em;
+	margin-top: 0px;
+}
+
+section{
+	margin-top: 30px;
+}
+
+.relevant{
+	font-size: 0.85em;
+	font-weight: bold;
+}
+
+.normal_relevancy{
+	font-size: 0.85em;
+	color: rgb(128, 128, 128);
+}
+
+.less_relevant{
+	font-size: 0.85em;
+	color: rgb(166, 166, 166);
+}
+
+a {
+	text-decoration: none;
+	
+}
+
+a:hover{
+	color: rgb(255, 128, 191);
+	
+}
+
+.info{
+	font-size: 0.8em;
+	color: grey;
+}
