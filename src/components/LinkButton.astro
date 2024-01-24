@@ -25,6 +25,7 @@ const { href, className, ariaLabel, title, disabled = false } = Astro.props;
       {href}
       class={`group inline-block hover:text-skin-accent ${className}`}
       aria-label={ariaLabel}
+      target={href.includes("http") ? "_blank" : ""}
       title={title}
     >
       <slot />

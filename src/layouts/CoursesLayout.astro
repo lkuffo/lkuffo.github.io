@@ -1,0 +1,200 @@
+---
+import { SITE } from "@config";
+import Breadcrumbs from "@components/Breadcrumbs.astro";
+import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
+import Layout from "./Layout.astro";
+import SpecialButton from "@components/SpecialButton.astro";
+
+export interface Props {
+  frontmatter: {
+    title: string;
+    description?: string;
+  };
+}
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={`${frontmatter.title} | ${SITE.title}`}>
+  <Header activeNav="courses" />
+  <Breadcrumbs />
+  <main id="main-content">
+    <section id="courses" class="prose mb-12 max-w-3xl prose-img:border-0">
+      <h1 class="text-2xl tracking-wider sm:text-3xl">{frontmatter.title}</h1>
+      <slot />
+    </section>
+
+      <section class="flex flex-wrap flex-row justify-between">
+        <div class="mb-10 relative border-2 border-b-4 border-black flex w-full max-w-[22rem] flex-col rounded-xl bg-orange-100 text-gray-700">
+            <div class="mx-4 relative mt-4 overflow-hidden rounded-xl text-white">
+            <img
+                src="src/assets/images/webscraping.jpeg"
+                alt="ui/ux review check"
+            />
+            </div>
+            <div class="p-6">
+            <div class="mb-3 flex items-center justify-between">
+                <span class="block font-mono font-bold text-xl font-medium leading-snug tracking-normal antialiased">
+                Web Scraping
+                </span>
+                <p class="flex font-bold items-center gap-1.5 font-mono text-base leading-relaxed antialiased">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="#f5db58"
+                    aria-hidden="true"
+                    class="-mt-0.5 h-5 w-5 text-yellow-700"
+                >
+                    <path
+                    fill-rule="evenodd"
+                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                    clip-rule="evenodd"
+                    ></path>
+                </svg>
+                4.7
+                </p>
+            </div>
+            <p class="block text-base font-light leading-relaxed antialiased">
+                Te convertirás en un experto en la extracción de datos de la web. Este es el curso más completo sobre Web Scraping de toda la Internet. Te enseño desde CERO los fundamentos del Web Scraping de una manera muy sencilla de entender; realizando extracción de datos de más de 20 páginas web 
+            </p>
+            <div class="group mt-8 inline-flex flex-wrap items-center gap-3">
+                <span
+                data-tooltip-target="github"
+                class="cursor-pointer rounded-full border border-red-500/5 bg-red-500/5 p-3 text-red-500 transition-colors hover:border-red-500/10 hover:bg-red-500/10 hover:!opacity-100 group-hover:opacity-70"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon-tabler"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path
+                        d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+                        ></path>
+                    </svg>
+                </span>
+        
+                <span
+                data-tooltip-target="more"
+                class="cursor-pointer rounded-full border border-red-500/5 bg-red-500/5 p-3 text-red-500 transition-colors hover:border-red-500/10 hover:bg-red-500/10 hover:!opacity-100 group-hover:opacity-70"
+                >
+                +18 horas
+                </span>
+
+                <span
+                data-tooltip-target="more"
+                class="cursor-pointer rounded-full border border-red-500/5 bg-red-500/5 p-3 text-red-500 transition-colors hover:border-red-500/10 hover:bg-red-500/10 hover:!opacity-100 group-hover:opacity-70"
+            >
+                97 clases
+            </span>
+
+            <span
+            data-tooltip-target="more"
+            class="cursor-pointer rounded-full border border-red-500/5 bg-red-500/5 p-3 text-red-500 transition-colors hover:border-red-500/10 hover:bg-red-500/10 hover:!opacity-100 group-hover:opacity-70"
+            >
+            8K alumnos
+            </span>
+            <span
+            data-tooltip-target="more"
+            class="cursor-pointer rounded-full border border-red-500/5 bg-red-500/5 p-3 text-red-500 transition-colors hover:border-red-500/10 hover:bg-red-500/10 hover:!opacity-100 group-hover:opacity-70"
+        >
+            2K reseñas
+        </span>
+        
+            </div>
+            </div>
+            <div class="p-6 pt-3 justify-center flex">
+                <SpecialButton text="¡ESCRÍBEME POR CUPONES!" color="orange" icon="scraping" href="https://www.udemy.com/course/curso-maestro-web-scraping/?referralCode=1BA4AD4AD4BED138A583"/>
+            </div>
+        </div>
+
+
+        <div class="mb-10 relative border-2 border-b-4 border-black flex w-full max-w-[22rem] flex-col rounded-xl bg-lime-100 text-gray-700">
+            <div class="mx-4 relative mt-4 overflow-hidden rounded-xl text-white">
+              <img
+                src="src/assets/images/dataviz.png"
+                alt="ui/ux review check"
+              />
+            </div>
+            <div class="p-6">
+              <div class="mb-3 flex items-center justify-between">
+                <span class="block font-mono font-bold text-xl font-medium leading-snug tracking-normal antialiased">
+                  Visualizaciones y Análisis de Datos
+                </span>
+                <p class="flex font-bold items-center gap-1.5 font-mono text-base leading-relaxed antialiased">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="#f5db58"
+                    aria-hidden="true"
+                    class="-mt-0.5 h-5 w-5 text-yellow-700"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  4.8
+                </p>
+              </div>
+              <p class="block text-base font-light leading-relaxed antialiased">
+                Cada clase es un nuevo desafío que tendremos que resolver con el poder del análisis de datos. Te enseño desde CERO los principios de +45 visualizacioens diferentes y del análisis de datos de una manera muy sencilla de entender.
+              </p>
+              <div class="group mt-8 inline-flex flex-wrap items-center gap-3">
+                <span
+                  data-tooltip-target="github"
+                  class="text-emerald-800 cursor-pointer rounded-full border border-red-500/5 bg-red-500/5 p-3 text-red-500 transition-colors hover:border-red-500/10 hover:bg-red-500/10 hover:!opacity-100 group-hover:opacity-70"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon-tabler"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path
+                        d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+                        ></path>
+                    </svg>
+                </span>
+          
+                <span
+                  data-tooltip-target="more"
+                  class="text-emerald-800 cursor-pointer rounded-full border border-red-500/5 bg-red-500/5 p-3 text-red-500 transition-colors hover:border-red-500/10 hover:bg-red-500/10 hover:!opacity-100 group-hover:opacity-70"
+                >
+                  +23 horas
+                </span>
+    
+                <span
+                data-tooltip-target="more"
+                class="text-emerald-800 cursor-pointer rounded-full border border-red-500/5 bg-red-500/5 p-3 text-red-500 transition-colors hover:border-red-500/10 hover:bg-red-500/10 hover:!opacity-100 group-hover:opacity-70"
+              >
+                117 clases
+              </span>
+    
+              <span
+              data-tooltip-target="more"
+              class="text-emerald-800 cursor-pointer rounded-full border border-red-500/5 bg-red-500/5 p-3 text-red-500 transition-colors hover:border-red-500/10 hover:bg-red-500/10 hover:!opacity-100 group-hover:opacity-70"
+            >
+              1K alumnos
+            </span>
+            <span
+            data-tooltip-target="more"
+            class="text-emerald-800 cursor-pointer rounded-full border border-red-500/5 bg-red-500/5 p-3 text-red-500 transition-colors hover:border-red-500/10 hover:bg-red-500/10 hover:!opacity-100 group-hover:opacity-70"
+          >
+            148 reseñas
+          </span>
+          
+              </div>
+            </div>
+            <div class="p-6 pt-3 justify-center flex">
+                <SpecialButton text="¡ESCRÍBEME POR CUPONES!" color="green" icon="scraping" href="https://www.udemy.com/course/curso-maestro-de-visualizaciones/?referralCode=6EA7B5E7A070417F990D"/>
+            </div>
+          </div>
+
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
