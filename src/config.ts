@@ -6,7 +6,7 @@ export const SITE: Site = {
   desc: "Hola, soy Leonardo Kuffó, y esto es lo que hago!",
   title: "Leonardo Kuffó",
   ogImage: "/assets/circular.png",
-  lightAndDarkMode: true,
+  lightAndDarkMode: false,
   postPerPage: 10,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
 };
