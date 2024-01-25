@@ -1,20 +1,21 @@
 ---
 import { LOGO_IMAGE, SITE } from "@config";
+import { getTranslation } from "translations";
 import Hr from "./Hr.astro";
 import LinkButton from "./LinkButton.astro";
 
 export interface Props {
-  activeNav?: "posts" | "tags" | "about" | "search" | "research" | "courses" | "music";
+  activeNav?: "posts" | "tags" | "search" | "research" | "courses" | "music";
 }
 
 const { activeNav } = Astro.props;
 ---
 
 <header>
-  <a id="skip-to-content" href="#main-content">Skip to content</a>
+  <a id="skip-to-content" href="#main-content">{getTranslation(Astro.currentLocale, 'Saltar al contenido')}</a>
   <div class="nav-container">
     <div class="top-nav-wrap">
-      <a href="/" class="logo whitespace-nowrap nav-box duration-200 pr-3 pl-3 hover:scale-105 hover:bg-pink-300 ">
+      <a href={`/${Astro.currentLocale}/`} class="logo whitespace-nowrap nav-box duration-200 pr-3 pl-3 hover:scale-105 hover:bg-pink-300 ">
         {
           LOGO_IMAGE.enable ? (
             <img
@@ -56,28 +57,28 @@ const { activeNav } = Astro.props;
         </button>
         <ul id="menu-items" class="display-none sm:flex">
           <li class={activeNav === "research" ? "nav-box-active bg-indigo-300" : "nav-box hover:bg-indigo-300"}>
-            <a href="/research">
-              Investigador
+            <a href={`/${Astro.currentLocale}/research`}>
+              {getTranslation(Astro.currentLocale, 'Investigador')}
             </a>
           </li>
           <li class={activeNav === "courses" ? "nav-box-active bg-lime-300" : "nav-box hover:bg-lime-300"}>
-            <a href="/courses">
-              Profesor
+            <a href={`/${Astro.currentLocale}/courses`}>
+              {getTranslation(Astro.currentLocale, 'Profesor')}
             </a>
           </li>
           <li class={activeNav === "music" ? "nav-box-active bg-amber-300" : "nav-box hover:bg-amber-300"}>
-            <a href="/music">
-              Músico
+            <a href={`/${Astro.currentLocale}/music`}>
+              {getTranslation(Astro.currentLocale, 'Músico')}
             </a>
           </li>
           <li class={activeNav === "posts" ? "nav-box-active bg-slate-300" : "nav-box hover:bg-slate-300"}>
-            <a href="/posts">
-              Blog
+            <a href={`/${Astro.currentLocale}/posts`}>
+              {getTranslation(Astro.currentLocale, 'Blog')}
             </a>
           </li>
           <li class="nav-box hover:bg-rose-300">
             <a href="/assets/cv.pdf" download="leonardo_kuffo_cv">
-              CV
+              {getTranslation(Astro.currentLocale, 'CV')}
             </a>
           </li>
           <!-- <li>
@@ -85,14 +86,9 @@ const { activeNav } = Astro.props;
               Tags
             </a>
           </li> -->
-          <!-- <li>
-            <a href="/about" class={activeNav === "about" ? "active" : ""}>
-              About
-            </a>
-          </li> -->
           <li>
             <LinkButton
-              href="/search"
+              href={`/${Astro.currentLocale}/search`}
               className={`focus-outline p-3 sm:p-1 ${
                 activeNav === "search" ? "active" : ""
               } flex`}
@@ -106,7 +102,7 @@ const { activeNav } = Astro.props;
                   d="M19.023 16.977a35.13 35.13 0 0 1-1.367-1.384c-.372-.378-.596-.653-.596-.653l-2.8-1.337A6.962 6.962 0 0 0 16 9c0-3.859-3.14-7-7-7S2 5.141 2 9s3.14 7 7 7c1.763 0 3.37-.66 4.603-1.739l1.337 2.8s.275.224.653.596c.387.363.896.854 1.384 1.367l1.358 1.392.604.646 2.121-2.121-.646-.604c-.379-.372-.885-.866-1.391-1.36zM9 14c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z"
                 ></path>
               </svg>
-              <span class="sr-only">Search</span>
+              <span class="sr-only">{getTranslation(Astro.currentLocale, 'Search')}</span>
             </LinkButton>
           </li>
           {

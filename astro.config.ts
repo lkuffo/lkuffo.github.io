@@ -8,6 +8,13 @@ import { SITE } from "./src/config";
 
 // https://astro.build/config
 export default defineConfig({
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "es"],
+    routing: {
+      prefixDefaultLocale: true,
+    },
+  },
   site: SITE.website,
   integrations: [
     tailwind({

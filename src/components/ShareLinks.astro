@@ -1,6 +1,7 @@
 ---
 import LinkButton from "./LinkButton.astro";
 import socialIcons from "@assets/socialIcons";
+import {getTranslation} from "translations";
 
 const URL = Astro.url;
 
@@ -39,7 +40,7 @@ const shareLinks = [
 ---
 
 <div class={`social-icons`}>
-  <span class="italic">Comparte esta entrada en:</span>
+  <span class="italic">{getTranslation(Astro.currentLocale, 'Comparte esta entrada en:')}</span>
   <div class="text-center">
     {
       shareLinks.map(social => (

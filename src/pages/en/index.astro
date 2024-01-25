@@ -10,8 +10,9 @@ import Card from "@components/Card";
 import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import { SOCIALS } from "@config";
+import { getTranslation } from "translations";
 
-const posts = await getCollection("blog");
+const posts = await getCollection("blog", ({ data }) => data.lang == Astro.currentLocale);
 
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
@@ -31,8 +32,8 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
       <h1 style="text-align: center;">
         <a
-          href="/posts/el-todo-es-mucho-menos">
-          "El todo es mucho menos que la suma de mis partes"
+          href={`/${Astro.currentLocale}/posts/el-todo-es-mucho-menos`}>
+          {getTranslation(Astro.currentLocale, "El todo es mucho menos que la suma de mis partes")}
         </a>
       </h1>
     
@@ -43,11 +44,11 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         additional color schemes can also be configured.
       </p> -->
       <div class="min-h-44 flex flex-wrap justify-evenly items-center ">
-        <SpecialButton text="INVESTIGADOR" color="orange" icon="research"/>
-        <SpecialButton text="PROFESOR" color="emerald" icon="courses"/>
-        <SpecialButton text="MÚSICO" color="purple" icon="music"/>
-        <SpecialButton text="YOUTUBER" color="red" icon="youtube"/>
-        <SpecialButton text="BLOG" color="yellow" icon="blog"/>
+        <SpecialButton text={getTranslation(Astro.currentLocale, "INVESTIGADOR")} color="orange" icon="research"/>
+        <SpecialButton text={getTranslation(Astro.currentLocale, "PROFESOR")} color="emerald" icon="courses"/>
+        <SpecialButton text={getTranslation(Astro.currentLocale, "MÚSICO")} color="purple" icon="music"/>
+        <SpecialButton text={getTranslation(Astro.currentLocale, "YOUTUBER")} color="red" icon="youtube"/>
+        <SpecialButton text={getTranslation(Astro.currentLocale, "BLOG")} color="yellow" icon="blog"/>
       </div>
 
       {
@@ -66,7 +67,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       true && (
         <>
           <section id="featured">
-            <h2 class="title-box">¿Qué estoy haciendo?</h2>
+            <h2 class="title-box">{getTranslation(Astro.currentLocale, '¿Qué estoy haciendo?')}</h2>
             <ul>
 
               <li class="my-6">
@@ -178,13 +179,13 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     {
       recentPosts.length > 0 && (
         <section id="recent-posts">
-          <h2 class="title-box">Blog</h2>
+          <h2 class="title-box">{getTranslation(Astro.currentLocale, 'Blog')}</h2>
           <ul>
             {recentPosts.map(
               ({ data, slug }, index) =>
                 index < 4 && (
                   <Card
-                    href={`/posts/${slug}`}
+                    href={`/${Astro.currentLocale}/posts/${slug}`}
                     frontmatter={data}
                     secHeading={false}
                   />
@@ -196,8 +197,8 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     }
 
     <div class="all-posts-btn-wrapper">
-      <LinkButton href="/posts">
-        Todas las entradas
+      <LinkButton href={`/${Astro.currentLocale}/posts`}>
+        { getTranslation(Astro.currentLocale, 'Todas las entradas')}
         <svg xmlns="http://www.w3.org/2000/svg"
           ><path
             d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"

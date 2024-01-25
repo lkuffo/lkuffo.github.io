@@ -4,7 +4,7 @@ import Posts from "@layouts/Posts.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import getPagination from "@utils/getPagination";
 
-const posts = await getCollection("blog");
+const posts = await getCollection("blog", ({ data }) => data.lang == Astro.currentLocale);
 
 const sortedPosts = getSortedPosts(posts);
 

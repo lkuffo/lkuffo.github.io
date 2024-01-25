@@ -12,11 +12,13 @@ export interface Props {
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog", ({ data }) => !data.draft);
-
-  const postResult = posts.map(post => ({
-    params: { slug: post.slug },
-    props: { post },
-  }));
+  console.log(posts);
+  const postResult = posts.map(post => {
+    return {
+      params: { slug: post.slug },
+      props: { post },
+    }
+  });
 
   const pagePaths = getPageNumbers(posts.length).map(pageNum => ({
     params: { slug: String(pageNum) },
@@ -28,7 +30,7 @@ export async function getStaticPaths() {
 const { slug } = Astro.params;
 const { post } = Astro.props;
 
-const posts = await getCollection("blog");
+const posts = await getCollection("blog", ({ data }) => data.lang == Astro.currentLocale);
 
 const sortedPosts = getSortedPosts(posts);
 

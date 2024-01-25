@@ -7,6 +7,7 @@ import Datetime from "@components/Datetime";
 import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
 import ShareLinks from "@components/ShareLinks.astro";
+import { getTranslation } from "translations";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -29,7 +30,7 @@ const { Content } = await post.render();
 
 const ogImageUrl = typeof ogImage === "string" ? ogImage : ogImage?.src;
 const ogUrl = new URL(
-  ogImageUrl ?? `/posts/${slugifyStr(title)}.png`,
+  ogImageUrl ?? `/${Astro.currentLocale}/posts/${slugifyStr(title)}.png`,
   Astro.url.origin
 ).href;
 
@@ -58,7 +59,7 @@ const layoutProps = {
         ><path
           d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
         ></path>
-      </svg><span>Ir atrás</span>
+      </svg><span> { getTranslation(Astro.currentLocale, 'Ir atrás') }</span>
     </button>
   </div>
   <main id="main-content">
@@ -89,7 +90,10 @@ const layoutProps = {
             d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
           ></path>
         </svg>
-        <span>Volver al principio</span>
+        <span>{
+          getTranslation(Astro.currentLocale, 'Volver al principio')
+        }
+        </span>
       </button>
 
       <ShareLinks />

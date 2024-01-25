@@ -1,0 +1,252 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import LinkButton from "@components/LinkButton.astro";
+import SpecialButton from "@components/SpecialButton.astro";
+import Hr from "@components/Hr.astro";
+import Card from "@components/Card";
+import Socials from "@components/Socials.astro";
+import getSortedPosts from "@utils/getSortedPosts";
+import { SOCIALS } from "@config";
+import { getTranslation } from "translations";
+
+const posts = await getCollection("blog", ({ data }) => data.lang == Astro.currentLocale);
+
+const sortedPosts = getSortedPosts(posts);
+const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
+const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
+
+const socialCount = SOCIALS.filter(social => social.active).length;
+---
+
+<Layout>
+  <Header />
+  <main id="main-content">
+    <section id="hero">
+
+      <div class="flex justify-center">
+        <img class="shadow-[0px_4px_0_0] w-32 duration-300 rounded-full border-2 p-2 border-black hover:scale-150 hover:bg-pink-300 hover:shadow-[0px_0px_0_0]" src="/assets/circular.png" alt="my picture"/>
+      </div>
+
+      <h1 style="text-align: center;">
+        <a
+          href={`/${Astro.currentLocale}/posts/el-todo-es-mucho-menos`}>
+          {getTranslation(Astro.currentLocale, "El todo es mucho menos que la suma de mis partes")}
+        </a>
+      </h1>
+    
+      <!-- <p>
+        AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro
+        blog theme. This theme follows best practices and provides accessibility
+        out of the box. Light and dark mode are supported by default. Moreover,
+        additional color schemes can also be configured.
+      </p> -->
+      <div class="min-h-44 flex flex-wrap justify-evenly items-center ">
+        <SpecialButton text={getTranslation(Astro.currentLocale, "INVESTIGADOR")} color="orange" icon="research"/>
+        <SpecialButton text={getTranslation(Astro.currentLocale, "PROFESOR")} color="emerald" icon="courses"/>
+        <SpecialButton text={getTranslation(Astro.currentLocale, "MÚSICO")} color="purple" icon="music"/>
+        <SpecialButton text={getTranslation(Astro.currentLocale, "YOUTUBER")} color="red" icon="youtube"/>
+        <SpecialButton text={getTranslation(Astro.currentLocale, "BLOG")} color="yellow" icon="blog"/>
+      </div>
+
+      {
+        // only display if at least one social link is enabled
+        socialCount > 0 && (
+          <div class="social-wrapper">
+            <Socials />
+          </div>
+        )
+      }
+    </section>
+
+    <Hr />
+
+    {
+      true && (
+        <>
+          <section id="featured">
+            <h2 class="title-box">{getTranslation(Astro.currentLocale, '¿Qué estoy haciendo?')}</h2>
+            <ul>
+
+              <li class="my-6">
+                <div class="flex flex-row items-center">
+                  <div class="rotate-180 -scale-y-100 mr-4 w-26">
+                    <svg class="icon-tabler" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 9.75a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 0 1 .778-.332 48.294 48.294 0 0 0 5.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                    </svg>
+                  </div>
+                  <div>
+                      <div
+                      class="inline-block text-lg font-medium text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
+                    >
+                      <h3 class="text-lg font-medium decoration-dashed hover:underline">¡ESTARÉ EN SIGMOD 2024!</h3>
+                    </div>
+                    <p>Voy a estar en Chile en la conferencia SIGMOD 2024 (Junio 9 a 15). Si estarán allí me pueden encontrar (ping me)!</p>
+                    <p class="italic text-xs">-- LK, 23 Enero 2024</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="my-6">
+                <div class="flex flex-row items-center">
+                  <div class="rotate-180 -scale-y-100 mr-4 w-26">
+                    <svg class="icon-tabler" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 9.75a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 0 1 .778-.332 48.294 48.294 0 0 0 5.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div
+                      class="inline-block text-lg font-medium text-skin-accent underline-offset-4 focus-visible:no-underline"
+                    >
+                      <h3 class="text-lg font-medium decoration-dashed hover:underline">ALP en DuckDB</h3>
+                    </div>
+                    <p>Estuve codificando mi nuevo algoritmo de compresión (ALP) para que se utilice dentro de un Sistema de Bases de Datos (DuckDB 
+                      <svg style="height: 1.2rem" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>DuckDB</title><path d="M12 0C5.363 0 0 5.363 0 12s5.363 12 12 12 12-5.363 12-12S18.637 0 12 0zM9.502 7.03a4.974 4.974 0 0 1 4.97 4.97 4.974 4.974 0 0 1-4.97 4.97A4.974 4.974 0 0 1 4.532 12a4.974 4.974 0 0 1 4.97-4.97zm6.563 3.183h2.351c.98 0 1.787.782 1.787 1.762s-.807 1.789-1.787 1.789h-2.351v-3.551z"/></svg>
+                      ). <a class="text-skin-accent decoration-dashed hover:underline" href="http://github.com/duckdb/duckdb/pull/9635" target="blank">Acá</a> el PR.</p>
+                    <p class="italic text-xs">-- LK, 22 Enero 2024</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="my-6">
+                <div class="flex flex-row items-center">
+                  <div class="rotate-180 -scale-y-100 mr-4 w-26">
+                    <svg class="icon-tabler" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 9.75a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 0 1 .778-.332 48.294 48.294 0 0 0 5.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div
+                      class="inline-block text-lg font-medium text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
+                    >
+                      <h3 class="text-lg font-medium decoration-dashed hover:underline">Empezando mi PhD</h3>
+                    </div>
+                    <p>A finales del 2023 empecé mi PhD! Me encuentro delucidando cuál va a ser mi área de investigación. Por ahora Compresión de Datos y Bases de Datos Vectoriales.</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="my-6">
+                <div class="flex flex-row items-center">
+                  <div class="rotate-180 -scale-y-100 mr-4 w-26">
+                    <svg class="icon-tabler" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 9.75a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 0 1 .778-.332 48.294 48.294 0 0 0 5.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                    </svg>
+                  </div>
+                  <div>
+                        <div
+                      class="inline-block text-lg font-medium text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
+                    >
+                      <h3 class="text-lg font-medium decoration-dashed hover:underline">Aprendiendo Unity</h3>
+                    </div>
+                    <p>Siempre me ha llamado la atención hacer videojuegos. ¿Nuevo hobby? Tal vez.</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="my-6">
+                <div class="flex flex-row items-center">
+                  <div class="rotate-180 -scale-y-100 mr-4 w-26">
+                    <svg class="icon-tabler" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 9.75a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 0 1 .778-.332 48.294 48.294 0 0 0 5.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div
+                  class="inline-block text-lg font-medium text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
+                >
+                  <h3 class="text-lg font-medium decoration-dashed hover:underline">Nuevo Curso</h3>
+                </div>
+                <p>¡Estoy planificando un nuevo curso en línea! El tema es sorpresa, estén atentos a mis redes!</p>
+                  </div>
+                </div>
+              </li>
+
+
+
+              <li class="my-6">
+
+              </li>
+            </ul>
+          </section>
+          {recentPosts.length > 0 && <Hr />}
+        </>
+      )
+    }
+
+    {
+      recentPosts.length > 0 && (
+        <section id="recent-posts">
+          <h2 class="title-box">{getTranslation(Astro.currentLocale, 'Blog')}</h2>
+          <ul>
+            {recentPosts.map(
+              ({ data, slug }, index) =>
+                index < 4 && (
+                  <Card
+                    href={`/${Astro.currentLocale}/posts/${slug}`}
+                    frontmatter={data}
+                    secHeading={false}
+                  />
+                )
+            )}
+          </ul>
+        </section>
+      )
+    }
+
+    <div class="all-posts-btn-wrapper">
+      <LinkButton href={`/${Astro.currentLocale}/posts`}>
+        { getTranslation(Astro.currentLocale, 'Todas las entradas')}
+        <svg xmlns="http://www.w3.org/2000/svg"
+          ><path
+            d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
+          ></path>
+        </svg>
+      </LinkButton>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* ===== Hero Section ===== */
+  #hero {
+    @apply pb-6 pt-8;
+  }
+  #hero h1 {
+    @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
+  }
+  #hero .rss-link {
+    @apply mb-6;
+  }
+  #hero .rss-icon { 
+    @apply mb-2 h-6 w-6 scale-110 fill-skin-accent sm:mb-3 sm:scale-125;
+  }
+  #hero p {
+    @apply my-2;
+  }
+
+
+  .social-wrapper {
+    @apply mt-4 flex flex-col sm:flex-row sm:items-center sm:justify-center;
+  }
+  .social-links {
+    @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
+  }
+
+  /* ===== Featured & Recent Posts Sections ===== */
+  #featured,
+  #recent-posts {
+    @apply pb-6 pt-12;
+  }
+  #featured h2,
+  #recent-posts h2 {
+    @apply text-2xl font-semibold tracking-wide;
+  }
+  .all-posts-btn-wrapper {
+    @apply my-8 text-center;
+  }
+</style>

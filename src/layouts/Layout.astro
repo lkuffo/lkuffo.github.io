@@ -3,7 +3,7 @@ import { LOCALE, SITE } from "@config";
 import "@styles/base.css";
 import { ViewTransitions } from "astro:transitions";
 
-const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
+const googleSiteVerification = "keWq83iTjrG6f_oCm_fFcwwNYxJCzn6UNH-6_kPek3E";
 
 export interface Props {
   title?: string;
@@ -35,7 +35,7 @@ const socialImageURL = new URL(
 
 <!doctype html>
 <html
-  lang=`${LOCALE.lang ?? "en"}`
+  lang=`${Astro.currentLocale}`
   class={`${scrollSmooth && "scroll-smooth"}`}
 >
   <head>

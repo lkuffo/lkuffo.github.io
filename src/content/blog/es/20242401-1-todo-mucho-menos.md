@@ -9,6 +9,7 @@ tags:
   - motivación
   - rambling
 description: Reflexiones de Enero
+lang: es
 ---
 
 _Tiempo de Lectura: ~4 minutos_

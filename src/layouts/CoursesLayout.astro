@@ -5,6 +5,7 @@ import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
 import Layout from "./Layout.astro";
 import SpecialButton from "@components/SpecialButton.astro";
+import { getTranslation } from "translations";
 
 export interface Props {
   frontmatter: {
@@ -21,7 +22,6 @@ const { frontmatter } = Astro.props;
   <Breadcrumbs />
   <main id="main-content">
     <section id="courses" class="prose mb-12 max-w-3xl prose-img:border-0">
-      <h1 class="text-2xl tracking-wider sm:text-3xl">{frontmatter.title}</h1>
       <slot />
     </section>
 
@@ -36,7 +36,7 @@ const { frontmatter } = Astro.props;
             <div class="p-6">
             <div class="mb-3 flex items-center justify-between">
                 <span class="block font-mono font-bold text-xl font-medium leading-snug tracking-normal antialiased">
-                Web Scraping
+                { getTranslation(Astro.currentLocale, 'Web Scraping') } 
                 </span>
                 <p class="flex font-bold items-center gap-1.5 font-mono text-base leading-relaxed antialiased">
                 <svg
@@ -56,7 +56,7 @@ const { frontmatter } = Astro.props;
                 </p>
             </div>
             <p class="block text-base font-light leading-relaxed antialiased">
-                Te convertirás en un experto en la extracción de datos de la web. Este es el curso más completo sobre Web Scraping de toda la Internet. Te enseño desde CERO los fundamentos del Web Scraping de una manera muy sencilla de entender; realizando extracción de datos de más de 20 páginas web 
+                { getTranslation(Astro.currentLocale, 'Te convertirás en un experto en la extracción de datos de la web. Este es el curso más completo sobre Web Scraping de toda la Internet. Te enseño desde CERO los fundamentos del Web Scraping de una manera muy sencilla de entender; realizando extracción de datos de más de 20 páginas web')} 
             </p>
             <div class="group mt-8 inline-flex flex-wrap items-center gap-3">
                 <span
@@ -79,33 +79,33 @@ const { frontmatter } = Astro.props;
                 data-tooltip-target="more"
                 class="cursor-pointer rounded-full border border-red-500/5 bg-red-500/5 p-3 text-red-500 transition-colors hover:border-red-500/10 hover:bg-red-500/10 hover:!opacity-100 group-hover:opacity-70"
                 >
-                +18 horas
+                { `+18 ${getTranslation(Astro.currentLocale, 'horas')}` }
                 </span>
 
                 <span
                 data-tooltip-target="more"
                 class="cursor-pointer rounded-full border border-red-500/5 bg-red-500/5 p-3 text-red-500 transition-colors hover:border-red-500/10 hover:bg-red-500/10 hover:!opacity-100 group-hover:opacity-70"
             >
-                97 clases
+                { `97 ${getTranslation(Astro.currentLocale, 'clases')}` }
             </span>
 
             <span
             data-tooltip-target="more"
             class="cursor-pointer rounded-full border border-red-500/5 bg-red-500/5 p-3 text-red-500 transition-colors hover:border-red-500/10 hover:bg-red-500/10 hover:!opacity-100 group-hover:opacity-70"
             >
-            8K alumnos
+            {`8K ${getTranslation(Astro.currentLocale, 'alumnos')}` }
             </span>
             <span
             data-tooltip-target="more"
             class="cursor-pointer rounded-full border border-red-500/5 bg-red-500/5 p-3 text-red-500 transition-colors hover:border-red-500/10 hover:bg-red-500/10 hover:!opacity-100 group-hover:opacity-70"
         >
-            2K reseñas
+            {`2K ${getTranslation(Astro.currentLocale, 'reseñas')}`}
         </span>
         
             </div>
             </div>
             <div class="p-6 pt-3 justify-center flex">
-                <SpecialButton text="¡ESCRÍBEME POR CUPONES!" color="orange" icon="scraping" href="https://www.udemy.com/course/curso-maestro-web-scraping/?referralCode=1BA4AD4AD4BED138A583"/>
+                <SpecialButton text={getTranslation(Astro.currentLocale, "¡ESCRÍBEME POR CUPONES!")} color="orange" icon="scraping" href="https://www.udemy.com/course/curso-maestro-web-scraping/?referralCode=1BA4AD4AD4BED138A583"/>
             </div>
         </div>
 
@@ -120,7 +120,9 @@ const { frontmatter } = Astro.props;
             <div class="p-6">
               <div class="mb-3 flex items-center justify-between">
                 <span class="block font-mono font-bold text-xl font-medium leading-snug tracking-normal antialiased">
-                  Visualizaciones y Análisis de Datos
+                  {
+                    getTranslation(Astro.currentLocale, 'Visualizaciones y Análisis de Datos')
+                  }
                 </span>
                 <p class="flex font-bold items-center gap-1.5 font-mono text-base leading-relaxed antialiased">
                   <svg
@@ -140,7 +142,9 @@ const { frontmatter } = Astro.props;
                 </p>
               </div>
               <p class="block text-base font-light leading-relaxed antialiased">
-                Cada clase es un nuevo desafío que tendremos que resolver con el poder del análisis de datos. Te enseño desde CERO los principios de +45 visualizacioens diferentes y del análisis de datos de una manera muy sencilla de entender.
+                {
+                 getTranslation(Astro.currentLocale, 'Cada clase es un nuevo desafío que tendremos que resolver con el poder del análisis de datos. Te enseño desde CERO los principios de +45 visualizacioens diferentes y del análisis de datos de una manera muy sencilla de entender.')
+                }
               </p>
               <div class="group mt-8 inline-flex flex-wrap items-center gap-3">
                 <span
@@ -163,33 +167,33 @@ const { frontmatter } = Astro.props;
                   data-tooltip-target="more"
                   class="text-emerald-800 cursor-pointer rounded-full border border-red-500/5 bg-red-500/5 p-3 text-red-500 transition-colors hover:border-red-500/10 hover:bg-red-500/10 hover:!opacity-100 group-hover:opacity-70"
                 >
-                  +23 horas
+                { `+23 ${getTranslation(Astro.currentLocale, 'horas')}` }
                 </span>
     
                 <span
                 data-tooltip-target="more"
                 class="text-emerald-800 cursor-pointer rounded-full border border-red-500/5 bg-red-500/5 p-3 text-red-500 transition-colors hover:border-red-500/10 hover:bg-red-500/10 hover:!opacity-100 group-hover:opacity-70"
               >
-                117 clases
+              { `117 ${getTranslation(Astro.currentLocale, 'clases')}` }
               </span>
     
               <span
               data-tooltip-target="more"
               class="text-emerald-800 cursor-pointer rounded-full border border-red-500/5 bg-red-500/5 p-3 text-red-500 transition-colors hover:border-red-500/10 hover:bg-red-500/10 hover:!opacity-100 group-hover:opacity-70"
             >
-              1K alumnos
+            { `1K ${getTranslation(Astro.currentLocale, 'alumnos')}` }
             </span>
             <span
             data-tooltip-target="more"
             class="text-emerald-800 cursor-pointer rounded-full border border-red-500/5 bg-red-500/5 p-3 text-red-500 transition-colors hover:border-red-500/10 hover:bg-red-500/10 hover:!opacity-100 group-hover:opacity-70"
           >
-            148 reseñas
+          { `148 ${getTranslation(Astro.currentLocale, 'reseñas')}` }
           </span>
           
               </div>
             </div>
             <div class="p-6 pt-3 justify-center flex">
-                <SpecialButton text="¡ESCRÍBEME POR CUPONES!" color="green" icon="scraping" href="https://www.udemy.com/course/curso-maestro-de-visualizaciones/?referralCode=6EA7B5E7A070417F990D"/>
+                <SpecialButton text={getTranslation(Astro.currentLocale, "¡ESCRÍBEME POR CUPONES!")} color="green" icon="scraping" href="https://www.udemy.com/course/curso-maestro-de-visualizaciones/?referralCode=6EA7B5E7A070417F990D"/>
             </div>
           </div>
 

@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/MusicLayout.astro
+layout: ../../layouts/MusicLayout.astro
 title: ""
 ---
 
