@@ -7,7 +7,6 @@ import getUniqueTags from "@utils/getUniqueTags";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
-  console.log(posts);
   const tags = getUniqueTags(posts);
 
   return tags.map(({ tag, tagName }) => {

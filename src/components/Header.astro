@@ -81,12 +81,14 @@ const { activeNav } = Astro.props;
               {getTranslation(Astro.currentLocale, 'CV')}
             </a>
           </li>
+
           <!-- <li>
             <a href="/tags" class={activeNav === "tags" ? "active" : ""}>
               Tags
             </a>
           </li> -->
-          <li>
+
+          <!-- <li>
             <LinkButton
               href={`/${Astro.currentLocale}/search`}
               className={`focus-outline p-3 sm:p-1 ${
@@ -104,7 +106,7 @@ const { activeNav } = Astro.props;
               </svg>
               <span class="sr-only">{getTranslation(Astro.currentLocale, 'Search')}</span>
             </LinkButton>
-          </li>
+          </li> -->
           {
             SITE.lightAndDarkMode && (
               <li>
@@ -125,6 +127,18 @@ const { activeNav } = Astro.props;
               </li>
             )
           }
+          <div class="flex flex-col">
+            <li class={`${Astro.currentLocale == 'en' ? "nav-box-lang-active" : "nav-box-lang"}`}>
+              <a href='/en' class="p-0">
+                EN🇬🇧
+              </a>
+            </li>
+            <li class={`${Astro.currentLocale == 'es' ? "nav-box-lang-active" : "nav-box-lang"}`}>
+              <a href='/es' class="p-0">
+                ES🇪🇸
+              </a>
+            </li>
+          </div>
         </ul>
       </nav>
     </div>
@@ -136,9 +150,11 @@ const { activeNav } = Astro.props;
   #skip-to-content {
     @apply absolute -top-full left-16 z-50 bg-skin-accent px-3 py-2 text-skin-inverted transition-all focus:top-4;
   }
+
   .nav-container {
     @apply mx-auto flex max-w-3xl flex-col items-center justify-between sm:flex-row;
   }
+
   .top-nav-wrap {
     @apply relative flex w-full items-start justify-between p-4 sm:items-center sm:py-8;
   }
@@ -156,7 +172,7 @@ const { activeNav } = Astro.props;
     @apply flex w-full flex-col items-center sm:ml-2 sm:flex-row sm:justify-end sm:space-x-4 sm:py-0;
   }
   nav ul {
-    @apply mt-4 grid w-44 grid-cols-2 grid-rows-4 gap-x-2 gap-y-2 sm:ml-0 sm:mt-0 sm:w-auto sm:gap-x-5 sm:gap-y-0;
+    @apply mt-4 grid w-44 grid-cols-2 grid-rows-4 gap-x-2 gap-y-2 sm:ml-0 sm:mt-0 sm:w-auto sm:gap-x-4 sm:gap-y-0;
   }
   nav ul li {
     @apply col-span-2 flex items-center justify-center;

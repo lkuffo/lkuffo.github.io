@@ -13,6 +13,7 @@ export default defineConfig({
     locales: ["en", "es"],
     routing: {
       prefixDefaultLocale: true,
+      strategy: "pathname",
     },
   },
   site: SITE.website,

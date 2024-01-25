@@ -5,7 +5,7 @@ title: ""
 
 <h1 class="title-box"> MY MUSIC </h1>
 
-¡Me encanta hacer **música**! Y a pesar de que tengo millón cosas en mi cabeza, cuando tengo tiempo para hacerlo es increíble.
+I love to make **music**! And even though I have a million things in my head, when I can dedicate my time to making music it is incredible.
 
 <?xml version="1.0" encoding="UTF-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
 
@@ -21,7 +21,7 @@ title: ""
 <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
 </svg> </span>
 
-<h2 style="text-align: center;" class="title-box"> Te dejo una selección de mis canciones mías favoritas </h2>
+<h2 style="text-align: center;" class="title-box"> Here you can listen to some of my songs </h2>
 
 <hr>
 

@@ -6,7 +6,7 @@ export function getLangFromUrl(url: URL) {
   return DEFAULT_LANG;
 }
 
-export function getTranslation(locale, textToTranslate) {
+export function getTranslation(locale: any, textToTranslate: any) {
   const properTranslations = TRANSLATIONS[locale || DEFAULT_LANG];
   if (properTranslations[textToTranslate] == undefined) {
     return textToTranslate;
@@ -40,8 +40,8 @@ export const TRANSLATIONS: { [key: string]: { [key: string]: string } } = {
     BLOG: "BLOG",
     "¿Qué estoy haciendo?": "NEWS",
     "Todas las entradas": "All posts",
-    "El todo es mucho menos que la suma de mis partes":
-      "The whole is much less than the sum of my parts",
+    '"El todo es mucho menos que la suma de mis partes"':
+      '"The whole is much less than the sum of my parts"',
     "All rights reserved.": "All rights reserved",
     "Página no encontrada": "Page not found",
     "Not Found": "Not Found",
@@ -59,6 +59,9 @@ export const TRANSLATIONS: { [key: string]: { [key: string]: string } } = {
     "Visualizaciones y Análisis de Datos": "Visualizations and Data Analysis",
     "Cada clase es un nuevo desafío que tendremos que resolver con el poder del análisis de datos. Te enseño desde CERO los principios de +45 visualizacioens diferentes y del análisis de datos de una manera muy sencilla de entender.":
       "Each lecture proposes a new challenge that we will have to solve with the power of data analysis. I will teach you from 0 the principles of +45 different visualizations and the principles of data analysis in a very easy to understand way.",
+    "Escrito por": "Written by",
+    "Tiempo de lectura:": "Time to read:",
+    minutos: "min",
   },
   es: {
     Actualizado: "Actualizado",
@@ -85,8 +88,8 @@ export const TRANSLATIONS: { [key: string]: { [key: string]: string } } = {
     BLOG: "BLOG",
     "¿Qué estoy haciendo?": "¿Qué estoy haciendo?",
     "Todas las entradas": "Todas las entradas",
-    "El todo es mucho menos que la suma de mis partes":
-      "El todo es mucho menos que la suma de mis partes",
+    '"El todo es mucho menos que la suma de mis partes"':
+      '"El todo es mucho menos que la suma de mis partes"',
     "All rights reserved.": "Todos los derechos reservados",
     "Página no encontrada": "Página no encontrada",
     "Not Found": "No encontrada",
@@ -105,5 +108,8 @@ export const TRANSLATIONS: { [key: string]: { [key: string]: string } } = {
       "Visualizaciones y Análisis de Datos",
     "Cada clase es un nuevo desafío que tendremos que resolver con el poder del análisis de datos. Te enseño desde CERO los principios de +45 visualizacioens diferentes y del análisis de datos de una manera muy sencilla de entender.":
       "Cada clase es un nuevo desafío que tendremos que resolver con el poder del análisis de datos. Te enseño desde CERO los principios de +45 visualizacioens diferentes y del análisis de datos de una manera muy sencilla de entender.",
+    "Escrito por": "Escrito por",
+    "Tiempo de lectura:": "Tiempo de lectura:",
+    minutos: "min",
   },
 } as const;

@@ -27,11 +27,11 @@ const iconVariants : {[key: string]: string} = {
 };
 
 const hrefMapping: {[key: string]: string} = {
-    'youtube': '/courses',
-    'research': '/research',
-    'courses': '/courses',
-    'music':'/music',
-    'blog': '/posts',
+    'youtube': `/${Astro.currentLocale}/courses`,
+    'research': `/${Astro.currentLocale}/research`,
+    'courses': `/${Astro.currentLocale}/courses`,
+    'music':`/${Astro.currentLocale}/music`,
+    'blog': `/${Astro.currentLocale}/posts`,
     'webscraping': ''
 };
 

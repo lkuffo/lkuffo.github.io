@@ -15,7 +15,7 @@ import { getTranslation } from "translations";
 const posts = await getCollection("blog", ({ data }) => data.lang == Astro.currentLocale);
 
 const sortedPosts = getSortedPosts(posts);
-const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
+//const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
 const socialCount = SOCIALS.filter(social => social.active).length;
@@ -32,8 +32,9 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
       <h1 style="text-align: center;">
         <a
+          class="underline-offset-4 decoration-6 duration-200 decoration-orange-300 hover:underline"
           href={`/${Astro.currentLocale}/posts/el-todo-es-mucho-menos`}>
-          {getTranslation(Astro.currentLocale, "El todo es mucho menos que la suma de mis partes")}
+          {getTranslation(Astro.currentLocale, '"El todo es mucho menos que la suma de mis partes"')}
         </a>
       </h1>
     
@@ -83,8 +84,8 @@ const socialCount = SOCIALS.filter(social => social.active).length;
                     >
                       <h3 class="text-lg font-medium decoration-dashed hover:underline">¡ESTARÉ EN SIGMOD 2024!</h3>
                     </div>
-                    <p>Voy a estar en Chile en la conferencia SIGMOD 2024 (Junio 9 a 15). Si estarán allí me pueden encontrar (ping me)!</p>
-                    <p class="italic text-xs">-- LK, 23 Enero 2024</p>
+                    <p>Voy a estar en Santiago, Chile en la conferencia SIGMOD 2024 (Junio 9 - 15). Si estarán allí me pueden encontrar!</p>
+                    <p class="italic text-xs">-- LK, 23-01-2024</p>
                   </div>
                 </div>
               </li>
@@ -102,10 +103,10 @@ const socialCount = SOCIALS.filter(social => social.active).length;
                     >
                       <h3 class="text-lg font-medium decoration-dashed hover:underline">ALP en DuckDB</h3>
                     </div>
-                    <p>Estuve codificando mi nuevo algoritmo de compresión (ALP) para que se utilice dentro de un Sistema de Bases de Datos (DuckDB 
+                    <p>Estuve implementando mi nuevo algoritmo de compresión (<a class="text-skin-accent decoration-dashed hover:underline" href="https://dl.acm.org/doi/abs/10.1145/3626717" target="blank">ALP</a>) para que se utilice dentro de un Sistema de Bases de Datos (DuckDB 
                       <svg style="height: 1.2rem" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>DuckDB</title><path d="M12 0C5.363 0 0 5.363 0 12s5.363 12 12 12 12-5.363 12-12S18.637 0 12 0zM9.502 7.03a4.974 4.974 0 0 1 4.97 4.97 4.974 4.974 0 0 1-4.97 4.97A4.974 4.974 0 0 1 4.532 12a4.974 4.974 0 0 1 4.97-4.97zm6.563 3.183h2.351c.98 0 1.787.782 1.787 1.762s-.807 1.789-1.787 1.789h-2.351v-3.551z"/></svg>
-                      ). <a class="text-skin-accent decoration-dashed hover:underline" href="http://github.com/duckdb/duckdb/pull/9635" target="blank">Acá</a> el PR.</p>
-                    <p class="italic text-xs">-- LK, 22 Enero 2024</p>
+                      ). Puedo comunicarles que ALP ya se encuentra merged dentro de DuckDB! <a class="text-skin-accent decoration-dashed hover:underline" href="http://github.com/duckdb/duckdb/pull/9635" target="blank">Acá</a> el PR.</p>
+                    <p class="italic text-xs">-- LK, 22-01-2024</p>
                   </div>
                 </div>
               </li>
@@ -123,7 +124,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
                     >
                       <h3 class="text-lg font-medium decoration-dashed hover:underline">Empezando mi PhD</h3>
                     </div>
-                    <p>A finales del 2023 empecé mi PhD! Me encuentro delucidando cuál va a ser mi área de investigación. Por ahora Compresión de Datos y Bases de Datos Vectoriales.</p>
+                    <p>A finales del 2023 empecé mi PhD en CWI (Paises Bajos) con Peter Boncz como supervisor! Me encuentro delucidando cuál va a ser mi área de investigación (dentro del mundo de los Sistemas de Bases de Datos). Por ahora Compresión de Datos y Bases de Datos Vectoriales.</p>
                   </div>
                 </div>
               </li>
@@ -157,7 +158,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
                     <div
                   class="inline-block text-lg font-medium text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
                 >
-                  <h3 class="text-lg font-medium decoration-dashed hover:underline">Nuevo Curso</h3>
+                  <h3 class="text-lg font-medium decoration-dashed hover:underline">¡Nuevo Curso!</h3>
                 </div>
                 <p>¡Estoy planificando un nuevo curso en línea! El tema es sorpresa, estén atentos a mis redes!</p>
                   </div>
