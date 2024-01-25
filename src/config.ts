@@ -5,7 +5,7 @@ export const SITE: Site = {
   author: "Leonardo Kuffó",
   desc: "Hola, soy Leonardo Kuffó, y esto es lo que hago!",
   title: "Leonardo Kuffó",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "/assets/circular.png",
   lightAndDarkMode: true,
   postPerPage: 10,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
