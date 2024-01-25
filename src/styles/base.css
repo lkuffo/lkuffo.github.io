@@ -88,11 +88,11 @@
   }
 
   .nav-box{
-    @apply box-border duration-200 border-2 border-transparent hover:shadow-[4px_4px_0_0] hover:border-2 hover:border-black hover:scale-105;
+    @apply box-border duration-200 border-2 border-transparent hover:shadow-[4px_4px_0_0] hover:border-2 hover:border-black hover:scale-105 hover:!text-black;
   }
 
   .nav-box-active{
-    @apply box-border duration-200 shadow-[4px_4px_0_0] border-2 border-black scale-105;
+    @apply box-border !text-black duration-200 shadow-[4px_4px_0_0] border-2 border-black scale-105 hover:!text-black;
   }
 
   .prose details {
@@ -110,7 +110,7 @@
   } */
 
   .title-box {
-    @apply p-4 max-w-fit mx-auto px-8 tracking-wide bg-slate-200 hover:scale-105 border-2 shadow-[2px_2px_0_0] duration-200 box-content border-black font-mono text-center uppercase hover:shadow-[8px_8px_0_0];
+    @apply p-4 !text-black max-w-fit mx-auto px-8 tracking-wide bg-slate-200 hover:scale-105 border-2 shadow-[2px_2px_0_0] duration-200 box-content border-black font-mono text-center uppercase hover:shadow-[8px_8px_0_0] text-black hover:!text-black;
   }
 
   /* ===== scrollbar ===== */
