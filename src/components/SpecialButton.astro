@@ -27,7 +27,7 @@ const iconVariants : {[key: string]: string} = {
 };
 
 const hrefMapping: {[key: string]: string} = {
-    'youtube': '',
+    'youtube': '/courses',
     'research': '/research',
     'courses': '/courses',
     'music':'/music',
@@ -38,7 +38,7 @@ const hrefMapping: {[key: string]: string} = {
 
 const { text, color, icon="", href = "" } = Astro.props;
 
-let className = `min-w-48 font-mono w-fit h-16 p-2 text-black font-thin ${colorVariants[color]} duration-150 hover:!border-b-2 text-black rounded-xl drop-shadow-sm group flex flex-col items-center align-center justify-center border-2 border-b-4 border-blue-950 cursor-pointer active:${colorVariants[color]} overflow-hidden`;
+let className = `shadow-[2px_2px_0_0] hover:scale-105 content-box min-w-48 font-mono w-fit h-16 p-2 text-black font-thin ${colorVariants[color]} duration-150 hover:shadow-[4px_4px_0_0] text-black drop-shadow-sm group flex flex-col items-center align-center justify-center border-2 border-blue-950 cursor-pointer active:${colorVariants[color]} overflow-hidden`;
 
 let hrefSolving = hrefMapping[icon];
 if (href.length > 0){

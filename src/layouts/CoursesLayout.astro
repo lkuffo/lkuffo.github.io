@@ -16,7 +16,7 @@ export interface Props {
 const { frontmatter } = Astro.props;
 ---
 
-<Layout title={`${frontmatter.title} | ${SITE.title}`}>
+<Layout title={`Teaching | ${SITE.title}`}>
   <Header activeNav="courses" />
   <Breadcrumbs />
   <main id="main-content">
@@ -29,7 +29,7 @@ const { frontmatter } = Astro.props;
         <div class="mb-10 relative border-2 border-b-4 border-black flex w-full max-w-[22rem] flex-col rounded-xl bg-orange-100 text-gray-700">
             <div class="mx-4 relative mt-4 overflow-hidden rounded-xl text-white">
             <img
-                src="src/assets/images/webscraping.jpeg"
+                src="/assets/webscraping.jpeg"
                 alt="ui/ux review check"
             />
             </div>
@@ -113,7 +113,7 @@ const { frontmatter } = Astro.props;
         <div class="mb-10 relative border-2 border-b-4 border-black flex w-full max-w-[22rem] flex-col rounded-xl bg-lime-100 text-gray-700">
             <div class="mx-4 relative mt-4 overflow-hidden rounded-xl text-white">
               <img
-                src="src/assets/images/dataviz.png"
+                src="/assets/dataviz.png"
                 alt="ui/ux review check"
               />
             </div>

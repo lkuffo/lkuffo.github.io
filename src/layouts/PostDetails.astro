@@ -33,8 +33,10 @@ const ogUrl = new URL(
   Astro.url.origin
 ).href;
 
+const pageTitle = `Blog | ${title}`;
+
 const layoutProps = {
-  title,
+  title: pageTitle,
   author,
   description,
   pubDatetime,
@@ -56,7 +58,7 @@ const layoutProps = {
         ><path
           d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
         ></path>
-      </svg><span>Go back</span>
+      </svg><span>Ir atrás</span>
     </button>
   </div>
   <main id="main-content">
@@ -87,7 +89,7 @@ const layoutProps = {
             d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
           ></path>
         </svg>
-        <span>Back to Top</span>
+        <span>Volver al principio</span>
       </button>
 
       <ShareLinks />
@@ -101,7 +103,7 @@ const layoutProps = {
     @apply mx-auto w-full max-w-3xl px-4 pb-12;
   }
   .post-title {
-    @apply text-2xl font-semibold text-skin-accent;
+    @apply text-6xl font-sans font-bold text-skin-accent;
   }
 </style>
 

@@ -3,9 +3,9 @@ layout: ../layouts/ResearchLayout.astro
 title: ""
 ---
 
-<h1 style="text-align: center;" class="title-box" > INVESTIGACIÓN </h1>
+<h1 class="title-box" > INVESTIGACIÓN </h1>
 
-<div class="text-sm text-emerald-600 text-center w-full"> Psst: Voy a estar en SIGMOD 2024 en Santiago, Chile! </div>
+<div class="text-sm text-red-600 text-center w-full"> Psst: Voy a estar en SIGMOD 2024 en Santiago, Chile! </div>
 
 ¡Me gusta hacer a las Bases de Datos más rápidas y que utilicen menos almacenamiento! Recientemente he estado trabajando en **Compresión de Datos** y **Vector Similarity Search** (ANN) dentro de Bases de Datos de Vectores en conjunto con el Profesor [Peter Boncz](https://homepages.cwi.nl/~boncz/) en [CWI](https://www.cwi.nl/en/) (Centrum Wiskunde & Informatica) -- donde me encuentro actualmente haciendo mi PhD.
 

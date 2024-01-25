@@ -2,8 +2,8 @@ import type { Site, SocialObjects } from "./types";
 
 export const SITE: Site = {
   website: "https://lkuffo.github.io/", // replace this with your deployed domain
-  author: "Sat Naing",
-  desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
+  author: "Leonardo Kuffó",
+  desc: "Hola, soy Leonardo Kuffó, y esto es lo que hago!",
   title: "Leonardo Kuffó",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,

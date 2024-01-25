@@ -5,7 +5,7 @@ title: ""
 
 <h1 class="title-box"> LEO PROFESOR </h1>
 
-<div class="text-sm text-emerald-600 text-center w-full">Psst: ¡Estoy preparando un nuevo curso! Estate atento a mis redes</div>
+<div class="text-sm text-red-600 text-center w-full">Psst: ¡Estoy preparando un nuevo curso! Estate atento a mis redes</div>
 
 Una de mis pasiones más grandes es **enseñar**. Lo he hecho durante más de 10 años.
 

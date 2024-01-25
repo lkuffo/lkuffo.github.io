@@ -26,10 +26,15 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     <section id="hero">
 
       <div class="flex justify-center">
-        <img class="w-32 duration-300 rounded-full border-2 p-2 border-black hover:w-52 hover:bg-pink-300" src="src/assets/images/circular.png"/>
+        <img class="shadow-[0px_4px_0_0] w-32 duration-300 rounded-full border-2 p-2 border-black hover:scale-150 hover:bg-pink-300 hover:shadow-[0px_0px_0_0]" src="/assets/circular.png" alt="my picture"/>
       </div>
 
-      <h1 style="text-align: center;">"El todo es mucho menos que la suma de mis partes"</h1>
+      <h1 style="text-align: center;">
+        <a
+          href="/posts/el-todo-es-mucho-menos">
+          "El todo es mucho menos que la suma de mis partes"
+        </a>
+      </h1>
     
       <!-- <p>
         AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro
@@ -38,10 +43,10 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         additional color schemes can also be configured.
       </p> -->
       <div class="min-h-44 flex flex-wrap justify-evenly items-center ">
-        <SpecialButton text="INVESTIGACIÓN" color="orange" icon="research"/>
-        <SpecialButton text="CURSOS EN LÍNEA" color="emerald" icon="courses"/>
-        <SpecialButton text="MÚSICA" color="purple" icon="music"/>
-        <SpecialButton text="CANAL DE YOUTUBE" color="red" icon="youtube"/>
+        <SpecialButton text="INVESTIGADOR" color="orange" icon="research"/>
+        <SpecialButton text="PROFESOR" color="emerald" icon="courses"/>
+        <SpecialButton text="MÚSICO" color="purple" icon="music"/>
+        <SpecialButton text="YOUTUBER" color="red" icon="youtube"/>
         <SpecialButton text="BLOG" color="yellow" icon="blog"/>
       </div>
 
@@ -58,7 +63,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     <Hr />
 
     {
-      featuredPosts.length > 0 && (
+      true && (
         <>
           <section id="featured">
             <h2 class="title-box">¿Qué estoy haciendo?</h2>
