@@ -31,7 +31,7 @@ const { currentPage, totalPages, paginatedPosts, tag, tagName } = Astro.props;
     <ul>
       {
         paginatedPosts.map(({ data, slug }) => (
-          <Card href={`/${Astro.currentLocale}/posts/${slug}`} frontmatter={data} />
+          <Card href={`/${Astro.currentLocale == 'en' ? '' : Astro.currentLocale + '/'}posts/${slug}`} frontmatter={data} />
         ))
       }
     </ul>
@@ -40,10 +40,10 @@ const { currentPage, totalPages, paginatedPosts, tag, tagName } = Astro.props;
   <Pagination
     {currentPage}
     {totalPages}
-    prevUrl={`/${Astro.currentLocale}/tags/${tag}${
+    prevUrl={`/${Astro.currentLocale == 'en' ? '' : Astro.currentLocale + '/'}tags/${tag}${
       currentPage - 1 !== 1 ? "/" + (currentPage - 1) : ""
     }`}
-    nextUrl={`/${Astro.currentLocale}/tags/${tag}/${currentPage + 1}`}
+    nextUrl={`/${Astro.currentLocale == 'en' ? '' : Astro.currentLocale + '/'}tags/${tag}/${currentPage + 1}`}
   />
 
   <Footer noMarginTop={totalPages > 1} />

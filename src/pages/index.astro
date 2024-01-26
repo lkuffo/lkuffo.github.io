@@ -33,7 +33,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       <h1 style="text-align: center;">
         <a
           class="underline-offset-4 decoration-6 duration-200 decoration-orange-300 hover:underline"
-          href={`/${Astro.currentLocale}/posts/the-whole-is-much-less`}>
+          href={`/${Astro.currentLocale == 'en' ? '' : Astro.currentLocale + '/'}posts/the-whole-is-much-less`}>
           {getTranslation(Astro.currentLocale, '"El todo es mucho menos que la suma de mis partes"')}
         </a>
       </h1>
@@ -184,7 +184,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
               ({ data, slug }, index) =>
                 index < 4 && (
                   <Card
-                    href={`/${Astro.currentLocale}/posts/${slug}`}
+                    href={`/${Astro.currentLocale == 'en' ? '' : Astro.currentLocale + '/'}posts/${slug}`}
                     frontmatter={data}
                     secHeading={false}
                   />
@@ -196,7 +196,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     }
 
     <div class="all-posts-btn-wrapper">
-      <LinkButton href={`/${Astro.currentLocale}/posts`}>
+      <LinkButton href={`/${Astro.currentLocale == 'en' ? '' : Astro.currentLocale + '/'}posts`}>
         { getTranslation(Astro.currentLocale, 'Todas las entradas')}
         <svg xmlns="http://www.w3.org/2000/svg"
           ><path

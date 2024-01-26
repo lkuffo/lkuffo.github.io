@@ -15,7 +15,7 @@ const { activeNav } = Astro.props;
   <a id="skip-to-content" href="#main-content">{getTranslation(Astro.currentLocale, 'Saltar al contenido')}</a>
   <div class="nav-container">
     <div class="top-nav-wrap">
-      <a href={`/${Astro.currentLocale}/`} class="logo whitespace-nowrap nav-box duration-200 pr-3 pl-3 hover:scale-105 hover:bg-pink-300 ">
+      <a href={`/${Astro.currentLocale == 'en' ? '' : Astro.currentLocale + '/'}`} class="logo whitespace-nowrap nav-box duration-200 pr-3 pl-3 hover:scale-105 hover:bg-pink-300 ">
         {
           LOGO_IMAGE.enable ? (
             <img
@@ -57,22 +57,22 @@ const { activeNav } = Astro.props;
         </button>
         <ul id="menu-items" class="display-none sm:flex">
           <li class={activeNav === "research" ? "nav-box-active bg-indigo-300" : "nav-box hover:bg-indigo-300"}>
-            <a href={`/${Astro.currentLocale}/research`}>
+            <a href={`/${Astro.currentLocale == 'en' ? '' : Astro.currentLocale + '/'}research`}>
               {getTranslation(Astro.currentLocale, 'Investigador')}
             </a>
           </li>
           <li class={activeNav === "courses" ? "nav-box-active bg-lime-300" : "nav-box hover:bg-lime-300"}>
-            <a href={`/${Astro.currentLocale}/courses`}>
+            <a href={`/${Astro.currentLocale == 'en' ? '' : Astro.currentLocale + '/'}courses`}>
               {getTranslation(Astro.currentLocale, 'Profesor')}
             </a>
           </li>
           <li class={activeNav === "music" ? "nav-box-active bg-amber-300" : "nav-box hover:bg-amber-300"}>
-            <a href={`/${Astro.currentLocale}/music`}>
+            <a href={`/${Astro.currentLocale == 'en' ? '' : Astro.currentLocale + '/'}music`}>
               {getTranslation(Astro.currentLocale, 'Músico')}
             </a>
           </li>
           <li class={activeNav === "posts" ? "nav-box-active bg-slate-300" : "nav-box hover:bg-slate-300"}>
-            <a href={`/${Astro.currentLocale}/posts`}>
+            <a href={`/${Astro.currentLocale == 'en' ? '' : Astro.currentLocale + '/'}posts`}>
               {getTranslation(Astro.currentLocale, 'Blog')}
             </a>
           </li>
@@ -129,7 +129,7 @@ const { activeNav } = Astro.props;
           }
           <div class="flex flex-col">
             <li class={`${Astro.currentLocale == 'en' ? "nav-box-lang-active" : "nav-box-lang"}`}>
-              <a href='/en' class="p-0">
+              <a href='/' class="p-0">
                 EN🇬🇧
               </a>
             </li>

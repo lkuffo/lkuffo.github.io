@@ -27,11 +27,11 @@ const iconVariants : {[key: string]: string} = {
 };
 
 const hrefMapping: {[key: string]: string} = {
-    'youtube': `/${Astro.currentLocale}/courses`,
-    'research': `/${Astro.currentLocale}/research`,
-    'courses': `/${Astro.currentLocale}/courses`,
-    'music':`/${Astro.currentLocale}/music`,
-    'blog': `/${Astro.currentLocale}/posts`,
+    'youtube': `/${Astro.currentLocale == 'en' ? '' : Astro.currentLocale + '/'}courses`,
+    'research': `/${Astro.currentLocale == 'en' ? '' : Astro.currentLocale + '/'}research`,
+    'courses': `/${Astro.currentLocale == 'en' ? '' : Astro.currentLocale + '/'}courses`,
+    'music':`/${Astro.currentLocale == 'en' ? '' : Astro.currentLocale + '/'}music`,
+    'blog': `/${Astro.currentLocale == 'en' ? '' : Astro.currentLocale + '/'}posts`,
     'webscraping': ''
 };
 

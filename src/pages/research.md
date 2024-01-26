@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/ResearchLayout.astro
+layout: ../layouts/ResearchLayout.astro
 title: ""
 ---
 

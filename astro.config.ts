@@ -11,10 +11,13 @@ export default defineConfig({
   i18n: {
     defaultLocale: "en",
     locales: ["en", "es"],
-    routing: {
-      prefixDefaultLocale: true,
-      strategy: "pathname",
-    },
+    // routing: {
+    //   prefixDefaultLocale: false,
+    //   strategy: "pathname",
+    // },
+  },
+  redirects: {
+    "/en": "/",
   },
   site: SITE.website,
   integrations: [

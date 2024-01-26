@@ -121,7 +121,9 @@ export default function SearchBar({ searchList, currentLocale }: Props) {
         {searchResults &&
           searchResults.map(({ item, refIndex }) => (
             <Card
-              href={`/${Astro.currentLocale}/posts/${item.slug}`}
+              href={`/${
+                Astro.currentLocale == "en" ? "" : Astro.currentLocale + "/"
+              }posts/${item.slug}`}
               frontmatter={item.data}
               key={`${refIndex}-${item.slug}`}
             />

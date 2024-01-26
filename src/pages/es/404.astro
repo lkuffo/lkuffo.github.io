@@ -16,7 +16,7 @@ import { getTranslation } from "translations";
       <span aria-hidden="true">¯\_(ツ)_/¯</span>
       <p>{ getTranslation(Astro.currentLocale, 'Página no encontrada')}</p>
       <LinkButton
-        href={`/${Astro.currentLocale}/`}
+        href={`/${Astro.currentLocale == 'en' ? '' : Astro.currentLocale + '/'}`}
         className="my-6 underline decoration-dashed underline-offset-8 text-lg"
       >
       {
