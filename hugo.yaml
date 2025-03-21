@@ -44,7 +44,7 @@ params:
 
   assets:
     # disableHLJS: true # to disable highlight.js
-    # disableFingerprinting: true
+    disableFingerprinting: true
     favicon: "circular.png"
     favicon16x16: "circular.png"
     favicon32x32: "circular.png"
