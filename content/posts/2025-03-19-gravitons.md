@@ -8,7 +8,7 @@ url: 'graviton3-better-than-graviton4-vss'
 cover:
   image: "/g3-vs-g4/gravitons.png"
   alt: "Graviton3 vs Graviton4 in Vector Similarity Search"
-  relative: true
+  relative: false
 images:
   - /g3-vs-g4/gravitons.png
 ---
