@@ -2,59 +2,59 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tags/avx/</loc>
-    <lastmod>2025-03-20T00:35:10+01:00</lastmod>
+    <loc>https://lkuffo.github.io/tags/avx/</loc>
+    <lastmod>2025-03-20T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/avx512/</loc>
-    <lastmod>2025-03-20T00:35:10+01:00</lastmod>
+    <loc>https://lkuffo.github.io/tags/avx512/</loc>
+    <lastmod>2025-03-20T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/aws/</loc>
-    <lastmod>2025-03-20T00:35:10+01:00</lastmod>
+    <loc>https://lkuffo.github.io/tags/aws/</loc>
+    <lastmod>2025-03-20T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/graviton3-better-than-graviton4-vss/</loc>
-    <lastmod>2025-03-20T00:35:10+01:00</lastmod>
+    <loc>https://lkuffo.github.io/graviton3-better-than-graviton4-vss/</loc>
+    <lastmod>2025-03-20T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-03-20T00:35:10+01:00</lastmod>
+    <loc>https://lkuffo.github.io/categories/</loc>
+    <lastmod>2025-03-20T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/graviton/</loc>
-    <lastmod>2025-03-20T00:35:10+01:00</lastmod>
+    <loc>https://lkuffo.github.io/tags/graviton/</loc>
+    <lastmod>2025-03-20T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2025-03-20T00:35:10+01:00</lastmod>
+    <loc>https://lkuffo.github.io/</loc>
+    <lastmod>2025-03-20T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/nearest-neighbor-search/</loc>
-    <lastmod>2025-03-20T00:35:10+01:00</lastmod>
+    <loc>https://lkuffo.github.io/tags/nearest-neighbor-search/</loc>
+    <lastmod>2025-03-20T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/neon/</loc>
-    <lastmod>2025-03-20T00:35:10+01:00</lastmod>
+    <loc>https://lkuffo.github.io/tags/neon/</loc>
+    <lastmod>2025-03-20T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-03-20T00:35:10+01:00</lastmod>
+    <loc>https://lkuffo.github.io/posts/</loc>
+    <lastmod>2025-03-20T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/simd/</loc>
-    <lastmod>2025-03-20T00:35:10+01:00</lastmod>
+    <loc>https://lkuffo.github.io/tags/simd/</loc>
+    <lastmod>2025-03-20T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/sve/</loc>
-    <lastmod>2025-03-20T00:35:10+01:00</lastmod>
+    <loc>https://lkuffo.github.io/tags/sve/</loc>
+    <lastmod>2025-03-20T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-03-20T00:35:10+01:00</lastmod>
+    <loc>https://lkuffo.github.io/tags/</loc>
+    <lastmod>2025-03-20T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/vector-search/</loc>
-    <lastmod>2025-03-20T00:35:10+01:00</lastmod>
+    <loc>https://lkuffo.github.io/categories/vector-search/</loc>
+    <lastmod>2025-03-20T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/vector-search/</loc>
-    <lastmod>2025-03-20T00:35:10+01:00</lastmod>
+    <loc>https://lkuffo.github.io/tags/vector-search/</loc>
+    <lastmod>2025-03-20T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/vector-similarity-search/</loc>
-    <lastmod>2025-03-20T00:35:10+01:00</lastmod>
+    <loc>https://lkuffo.github.io/tags/vector-similarity-search/</loc>
+    <lastmod>2025-03-20T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/vss/</loc>
-    <lastmod>2025-03-20T00:35:10+01:00</lastmod>
+    <loc>https://lkuffo.github.io/tags/vss/</loc>
+    <lastmod>2025-03-20T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/archives/</loc>
+    <loc>https://lkuffo.github.io/archives/</loc>
   </url><url>
-    <loc>http://localhost:1313/publications/</loc>
+    <loc>https://lkuffo.github.io/publications/</loc>
   </url>
 </urlset>
