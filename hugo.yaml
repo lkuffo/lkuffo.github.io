@@ -1,0 +1,169 @@
+baseURL: https://lkuffo.github.io/
+languageCode: en-us
+title: Leonardo Kuffo
+theme: ["PaperMod"]
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+taxonomies:
+  tag: "tags"
+  category: "categories"
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: Leonardo Kuffo
+  description: "Kuffo's Blog"
+  keywords: [Blog, Portfolio, PaperMod]
+  author: Leonardo Kuffo
+  images: ["<link or path of image for opengraph, twitter-cards>"]
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: true
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "circular.png"
+    favicon16x16: "circular.png"
+    favicon32x32: "circular.png"
+    apple_touch_icon: "<link / abs url>"
+    safari_pinned_tab: "<link / abs url>"
+
+  label:
+    text: "lkuffo"
+    icon: circular.png
+    iconHeight: 25
+
+  # profile-mode
+  profileMode:
+    enabled: false # needs to be explicitly set
+    title: ExampleSite
+    subtitle: "This is subtitle"
+    imageUrl: "<img location>"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: my image
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Tags
+        url: tags
+
+  # home-info mode
+  homeInfoParams:
+    Title: "Leonardo Kuffo"
+    Content: |
+      Researcher at CWI, Teacher, Musician  
+      Interested in Vector Similarity Search and Data Compression    
+      Creator of [**ALP**](https://github.com/cwida/ALP) (compression algorithm) and [**PDX**](https://github.com/cwida/PDX) (vertical data layout for vectors)   
+      +2M views in YouTube, +12K students in Udemy   
+      >
+      ### News
+      > - [2025/03] I will be at SIGMOD'25 in Berlin, presenting [PDX](https://github.com/cwida/PDX)!    
+      
+      Contact: lxkr@cwi.nl
+
+
+      
+
+  socialIcons:
+    - name: googlescholar
+      url: "https://scholar.google.com/citations?user=g6vekOwAAAAJ&hl=en"
+    # - name: stackoverflow
+    #   url: "https://stackoverflow.com"
+    - name: github
+      url: "https://github.com/lkuffo"
+    - name: linkedin
+      url: "https://linkedin.com/in/lkuffo"
+    - name: udemy
+      url: "https://www.udemy.com/user/leonardo-xavier-kuffo-rivero/"
+    - name: youtube
+      url: "https://www.youtube.com/KufGal"
+    - name: x
+      url: "https://x.com/LeonardoKuffo"
+
+  analytics:
+    google:
+      SiteVerificationTag: "XYZabc"
+    bing:
+      SiteVerificationTag: "XYZabc"
+    yandex:
+      SiteVerificationTag: "XYZabc"
+
+  cover:
+    hidden: false # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: false # hide on single page
+
+  editPost:
+    URL: "https://github.com/<path_to_repo>/content"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]
+menu:
+  main:
+    - identifier: archives
+      name: 📝 Posts
+      url: /archives/
+      weight: 5
+    # - identifier: categories
+    #   name: Categories
+    #   url: /categories/
+      weight: 10
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 15
+    - identifier: publications
+      name: 📙 My Research
+      url: /publications/
+      weight: 12
+    - identifier: mycsv
+      name: CV
+      url: "/lk_cv_2025.pdf"
+      weight: 30
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
+markup:
+  highlight:
+    enable: true
+    noClasses: false
+    pygmentsUseClasses: true
+    anchorLineNos: true
+    codeFences: true
+    # guessSyntax: true
+    lineNos: true
+    style: monokai
