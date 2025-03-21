@@ -14,7 +14,7 @@ cover:
 
 A few months ago, we started working on a vertical layout for vector similarity search ([PDX](https://github.com/cwida/PDX)). As part of the benchmarks that we were running on different microarchitectures and vector systems like FAISS, Milvus, and Usearch, there was an observation that puzzled us: **Graviton3 performed better than Graviton4 in almost all vector search scenarios**, not only in queries per dollar (QP$) but also in queries per second (QPS). This was the case across vector libraries and even in our implementations of vector search algorithms. Here is one example of the QPS and QP$ of both microarchitectures on queries to an IVF index on `float32` vectors with FAISS compiled with SVE. 
 
-```c
+```
 R@10:>0.99
 OpenAI/1536 -----------------------------------
 Graviton3  | 27.4 QPS ██████████████████████
