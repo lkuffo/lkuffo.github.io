@@ -8,6 +8,8 @@ url: 'graviton3-better-than-graviton4-vss'
 cover:
   image: "/g3-vs-g4/gravitons.png"
   alt: "Graviton3 vs Graviton4 in Vector Similarity Search"
+images:
+  - /g3-vs-g4/gravitons.png
 ---
 > TL;DR: **If you are doing vector search with a vector library that supports SVE, you should use a Graviton 3 machine. It is cheaper, and it will also deliver more raw performance.**
 > 
