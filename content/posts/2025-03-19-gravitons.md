@@ -1,5 +1,5 @@
 ---
-date: '2025-03-20T00:35:10+01:00'
+date: '2025-03-20T12:00:00Z'
 draft: false
 title: 'AWS Graviton 3 > Graviton 4 for Vector Similarity Search'
 tags: ["simd", "sve", "graviton", "neon", "aws", "vss", "vector-search", "vector-similarity-search", "nearest-neighbor-search", "avx512", "avx"]
