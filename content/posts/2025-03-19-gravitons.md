@@ -39,7 +39,7 @@ In the OpenAI/1536 dataset with 1M vectors, Graviton3 delivers 25% more queries 
 
 **The main culprit** is that Graviton4 has a SVE SIMD register size of 128 bits ***—half of the 256-bit registers of Graviton3***.
 
-In the rest of this blog post, we will dive deep into *why* this difference is particularly detrimental to the performance of vector similarity search and *why* this hasn’t been picked up by other benchmarks. But before discussing SVE and SIMD register width, let's refresh our knowledge of SIMD. 
+In the rest of this blog post, we will dive deep into *why* this difference is particularly detrimental to the performance of vector similarity search and *why* this hasn’t been picked up by other benchmarks. But before discussing about the Gravitons, let's refresh our knowledge of SIMD. 
 
 ## SIMD in Vector Similarity Search
 
